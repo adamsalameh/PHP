@@ -1,0 +1,29 @@
+What is varoable?
+
+You know already that if you want to print "hello" you can type the following code:
+<?php echo "hello"; 
+So if you want to type it 2 times you can do that by repeting the same code again, it's simple, becasue it's only one word
+But what if you want to type the following text:
+" Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+And you need to use this text many times, it's really hard to type it each time.
+So here is the solution for you, it's a variable.
+The variable is a space in the memory where you can store a value and use this value later even you can change it.
+In PHP the variable should start with the dollar sign $ followed by the name that you want to choose for it.
+
+#1 Example:
+<?php
+$name = "Jhon";
+$age = 30;
+echo $name;
+echo "\n";  // end the line and start with the next one
+echo $age;
+echo PHP_EOL; // end the line and start with the next one
+
+#2
+<?php
+$name = "Jhon";
+$age = 30;
+$career = "PHP programmer";
+echo "My name is {$name} and I'm {$age} years old. I wanna be a {$career}!";
+
+
