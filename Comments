@@ -1,0 +1,23 @@
+Comments are not executed as part of the code, it used to explain things that might be hard to understand.
+Use comments only when there is a need to explain things.
+Don't use too much comments.
+
+There is three ways to write comments in PHP:
+// this is a single-line comment
+# this is another way to write a single-line comment
+/* This is a way to write
+multiple-line  
+comment */
+
+Example:
+
+<?php
+// This is a comment so the code won't run here $x;
+
+# This is another comment 
+
+/*
+This code won't run 
+echo "Hi";
+
+*/
