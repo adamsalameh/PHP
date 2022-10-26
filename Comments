@@ -2,7 +2,7 @@ Comments are not executed as part of the code, it used to explain things that mi
 Use comments only when there is a need to explain things.
 Don't use too much comments.
 
-There is three ways to write comments in PHP:
+Three ways to write comments in PHP:
 // this is a single-line comment
 # this is another way to write a single-line comment
 /* This is a way to write
@@ -19,5 +19,4 @@ Example:
 /*
 This code won't run 
 echo "Hi";
-
 */
