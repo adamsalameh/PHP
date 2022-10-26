@@ -1,21 +1,16 @@
 Comments are not executed as part of the code, it used to explain things that might be hard to understand.
 Use comments only when there is a need to explain things.
-Don't use too much comments.
+Don't use comments too much.
 
-Three ways to write comments in PHP:
-// this is a single-line comment
-# this is another way to write a single-line comment
-/* This is a way to write
-multiple-line  
-comment */
+Two types of comments are supported in PHP:
+1- Single-line comment supported by two ways, using // c++ style or using # shell-style:
+2- Multi-line comment by using /* at the start of the comment and */ at the end of the comment.
 
 Example:
 
 <?php
-// This is a comment so the code won't run here $x;
-
-# This is another comment 
-
+// This is a single-line comment using c++ style
+# This is  a single-line comment using shell-style
 /*
 This code won't run 
 echo "Hi";
