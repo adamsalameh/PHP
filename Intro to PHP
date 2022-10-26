@@ -10,7 +10,7 @@ PHP use interpreter not compiler.
 PHP Has strict type.
 PHP can be easily embedded into HTML.
 PHP is compaitable with many databases.
-Top PHP servers Apache and Nginx.
+Top PHP web servers are Apache and Nginx.
 Top PHP frameworks Symfony and Laravel
 80 percent of the web runs on PHP.
 
