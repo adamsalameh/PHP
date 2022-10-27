@@ -1,0 +1,95 @@
+PHP has ten primitive types
+
+Four scalar:
+bool 
+int
+float (double)
+string
+
+Four compound:
+array
+object
+callable
+iterable
+
+Two special:
+resource
+NULL
+
+Note: PHP is a dynamic scripting languange, the type of a variable is decided at runtime by the parser depending on the data that assigned to it.
+
+Knowing the type of a variable:
+There are ways to know the type of the variable, you can use gettype() function which's print the type of the variable.
+For better visibility you can use var_dump() to check the type and the value of a variable.
+
+
+=========================================| Code |===============================================
+<?php
+$bool = true;
+var_dump($bool); 
+$decimal = 5; 
+var_dump($decimal); 
+$float = 5.0;
+var_dump($float);
+echo gettype($float); // will print double, double and float are the same thing in PHP
+echo PHP_EOL;  // End of line
+$string = 'Hello';
+var_dump($string);
+$char = 'c';
+var_dump($char); // will print string, there is no char in PHP only string
+
+===========================================| End of Code|=================================================
+
+The output:
+------------------------------------------------------------------------------------------------------------
+bool(true)
+int(5)
+float(5)
+double
+string(5) "Hello"
+string(1) "c"
+------------------------------------------------------------------------------------------------------------
+
+Other ways to check if the variable type is accurate:
+
+is_scalar()
+is_numeric()
+
+is_bool() 
+is_int() 
+is_float() 
+is_string() 
+is_array() 
+is_object() 
+is_callable() 
+is_iterable()
+is_resource() 
+is_null() 
+
+If you notice it's easy way to do so as you need to type is_ before the type :)
+The functions return a boolean (true or false).
+
+Try to change the vaule of $x in the following code to check the result.
+
+=========================================| Code |===============================================
+<?php
+$x = 5;
+var_dump(is_iterable($x));
+echo PHP_EOL;
+var_dump(is_callable($x));
+echo PHP_EOL;
+var_dump(is_scalar($x));
+echo PHP_EOL;
+var_dump(is_int($x));
+echo PHP_EOL;
+var_dump(is_float($x));
+echo PHP_EOL;
+var_dump(is_numeric($x));
+echo PHP_EOL;
+var_dump(is_string($x));
+echo PHP_EOL;
+var_dump(is_array($x));
+echo PHP_EOL;
+var_dump(is_object($x));
+echo PHP_EOL;
+========================================| End of Code|=================================================
