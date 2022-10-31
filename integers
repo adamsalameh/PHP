@@ -1,0 +1,49 @@
+Integers
+
+PHP integers can be presented in decimal (base 10), hexadecimal (base 16), octal (base 8) or binary (base 2) notation. 
+
+For negative number the negation operator is used.
+
+Decimal is based on 10 from 0 to 9 [0,1,2,3,4,5,6,7,8,9] there is no notaion
+Hexadecimal is based on 16 from 0 to f [0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F] notation start with 0x
+Octal is based on 8 [0,1,2,3,4,5,6,7] notation start with 0, 0o, 0O
+Binary based on 2 [0,1]   notation start with 0b   
+Integer can contain underscores (_) between digits, for better readability but it's not supported on all versions. 
+
+=========================================| Code |===============================================
+<?php
+$decimal = 1289; 
+$octal = 055; 
+$octal = 0o55; // octal number (as of PHP 8.1.0) sometimes it gives error in other versions
+$hexadecimal  = 0xf1; 
+$binary = 0b101; 
+$decimal_with_underscores = 123_456_7; //sometimes it gives error in other versions
+
+echo $decimal."\n"; 
+echo $octal."\n"; 
+echo $decimal."\n"; 
+echo $hexadecimal."\n"; 
+echo $binary."\n"; 
+echo $decimal_with_underscores."\n";
+
+======================================| End of Code|============================================
+Integer size:
+
+The size of the integer is platform-dependent.
+To konw the size (how many bytes) use the following constant PHP_INT_SIZE.
+Knowing the maximum value use the constant PHP_INT_MAX.
+And for the minimum value use the constant PHP_INT_MIN.
+
+=========================================| Code |===============================================
+<?php
+
+echo PHP_INT_SIZE."\n"; 
+echo PHP_INT_MAX."\n"; 
+echo PHP_INT_MIN."\n";
+
+======================================| End of Code|============================================
+
+
+
+
+
