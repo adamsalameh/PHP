@@ -1,0 +1,101 @@
+Floating point numbers:
+Float is the same as double in PHP which's represent a floating point number.
+YOu can represent a float number as the following by writing a floating point number like 55.99 or
+by exponential number like 27.12e3 or even 29.15e-2 
+
+Note: 27.12e3 = 27.12 * 1000 and 29.15e-2 = 29.15 / 100
+
+=========================================| Code |===============================================
+
+<?php
+
+$float = 55.99; 
+$float_with_exponent = 1.25e3;
+$float_with_negative_exponent = 1.58e-2 ;
+$float_with_underscores = 1_234.567; // as of PHP 7.4.0 
+
+echo $float."\n"; 
+echo $float_with_exponent."\n"; 
+echo $float_with_negative_exponent."\n"; 
+echo $float_with_underscores."\n"; 
+
+======================================| End of Code|============================================
+
+The size of a float is platform-dependent.
+You can know the number of decimal digits that can be rounded into a float and back without precision loss using the constant PHP_FLOAT_DIG
+Knowing the maximum value use the constant PHP_FLOAT_MAX.
+And for the minimum value use the constant PHP_FLOAT_MIN.
+
+=========================================| Code |===============================================
+<?php
+
+echo PHP_FLOAT_DIG."\n"; 
+echo PHP_FLOAT_MAX."\n"; 
+echo PHP_FLOAT_MIN."\n"; 
+======================================| End of Code|============================================
+
+Floats and double are the same in PHP:
+When you use gettype() it show double and float when you use var_dump()
+
+=========================================| Code |===============================================
+<?php
+
+$float = 1.252;
+echo gettype($float)."\n";
+var_dump($float);
+======================================| End of Code|============================================
+
+Floating point precision:
+
+Never use floating point for financial operation (money) as sometimes they don't behavie the same for all numbers
+It's better to do the money calculation in cents and then convert them to floating point
+
+=========================================| Code |===============================================
+<?php
+
+$a = 0.7;
+$b = 0.1;
+$c = ($a + $b) * 10 ;
+echo floor($c)."\n";      // This is a wrong answer  7
+
+// how to fix this:
+function convertToCent($a){
+	return $a * 100;
+}
+function convertToDollar($a){
+	return $a / 100;
+}
+$c = (convertToCent($a) + convertToCent($b)) * 10;
+echo (floor(convertToDollar($c)));
+
+======================================| End of Code|============================================
+
+Another example:
+
+=========================================| Code |===============================================
+<?php
+
+$a = 0.2;
+$b = 0.1;
+
+$c = ($a + $b) * 10 ;
+echo ceil($c)."\n"; // This is a wrong answer  7
+
+// how to fix this:
+
+function convertToCent($a){
+	return $a * 100;
+}
+
+function convertToDollar($a){
+	return $a / 100;
+}
+
+$c = (convertToCent($a) + convertToCent($b)) * 10;
+echo (floor(convertToDollar($c)));
+
+======================================| End of Code|============================================
+
+
+
+
